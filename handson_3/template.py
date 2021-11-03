@@ -1,6 +1,9 @@
+#!/usr/bin/python3
+#-*-coding:utf-8-*-
+
 from pwn import *
 
-target = process("./handson_3")
+target = process("./chall")
 
 # address
 system_plt = 

@@ -1,7 +1,5 @@
 /* handson_1 */
 #include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
 
 void vuln(){
   char buf[16];
@@ -19,4 +17,11 @@ void vuln(){
 int main(){
   vuln();
   return 0;
+}
+
+__attribute__((constructor))
+void setup(){
+    setvbuf(stdin,  NULL, _IONBF, 0);
+    setvbuf(stdout, NULL, _IONBF, 0);
+    setvbuf(stderr, NULL, _IONBF, 0);
 }

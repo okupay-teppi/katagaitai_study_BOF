@@ -1,6 +1,9 @@
+#!/usr/bin/python3
+#-*-coding:utf-8-*-
+
 from pwn import *
 
-target = process("./handson_4")
+target = process("./chall")
 
 # address
 libc_binsh_off = 
